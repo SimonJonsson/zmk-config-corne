@@ -194,6 +194,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -246,10 +248,10 @@ MOUSE {
         };
 FUNC {
          bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp K_PREV  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_UP  &kp K_MUTE        &kp C_VOLUME_DOWN  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_PREVIOUS   &kp C_PLAY_PAUSE  &kp C_NEXT         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans            &trans             &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans           &trans
 >;};
 lower_layer {
             display-name = "NUMBER";
