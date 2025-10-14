@@ -148,6 +148,24 @@
             bindings = <&kp PERCENT>;
             key-positions = <5 8>;
         };
+
+        o_umlaut {
+            bindings = <&kp RA(U) &kp O>;
+            key-positions = <7 9>;
+            layers = <0>;
+        };
+
+        a_umlaut {
+            bindings = <&kp RA(U) &kp A>;
+            key-positions = <7 13>;
+            layers = <0>;
+        };
+
+        a_ring {
+            bindings = <&kp RA(A)>;
+            key-positions = <13 3>;
+            layers = <0>;
+        };
     };
 
     behaviors {
