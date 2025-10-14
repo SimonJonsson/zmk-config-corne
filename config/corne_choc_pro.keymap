@@ -151,19 +151,19 @@
 
         o_umlaut {
             bindings = <&kp RA(U) &kp O>;
-            key-positions = <7 9>;
+            key-positions = <9 11>;
             layers = <0>;
         };
 
         a_umlaut {
             bindings = <&kp RA(U) &kp A>;
-            key-positions = <7 13>;
+            key-positions = <9 15>;
             layers = <0>;
         };
 
         a_ring {
             bindings = <&kp RA(A)>;
-            key-positions = <13 3>;
+            key-positions = <3 15>;
             layers = <0>;
         };
     };
