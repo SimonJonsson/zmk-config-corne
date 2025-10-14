@@ -143,6 +143,11 @@
             key-positions = <15 16>;
             layers = <0>;
         };
+
+        percentage {
+            bindings = <&kp PERCENT>;
+            key-positions = <5 8>;
+        };
     };
 
     behaviors {
