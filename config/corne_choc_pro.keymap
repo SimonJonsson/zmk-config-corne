@@ -150,19 +150,19 @@
         };
 
         o_umlaut {
-            bindings = <&kp RA(U) &kp O>;
+            bindings = <&u_umlaut>;
             key-positions = <9 11>;
             layers = <0>;
         };
 
         a_umlaut {
-            bindings = <&kp RA(U) &kp A>;
+            bindings = <&a_umlaut>;
             key-positions = <9 15>;
             layers = <0>;
         };
 
         a_ring {
-            bindings = <&kp RA(A)>;
+            bindings = <&ae>;
             key-positions = <3 15>;
             layers = <0>;
         };
@@ -208,6 +208,29 @@
         };
     };
 
+    macros {
+        u_umlaut: u_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(U) &kp O>;
+            label = "U_UMLAUT";
+        };
+
+        a_umlaut: a_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp A>;
+            label = "A_UMLAUT";
+        };
+
+        ae: ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(A)>;
+            label = "AE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -221,10 +244,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E            &kp R     &kp T        &none  &none  &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&mt ESC LCTRL  &kp A  &kp S  &kp D            &kp F     &kp G        &none  &none  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C            &kp V     &kp B                      &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                             &lt 1 BACKSPACE  &kp LGUI  &lt 3 SPACE                &lt 4 ENTER  &kp LCTRL  &kp RALT
+&kp TAB        &kp Q  &kp W  &kp E            &kp R     &kp T        &none  &none  &kp Y        &kp U         &kp I      &kp O    &kp P     &kp BSPC
+&mt ESC LCTRL  &kp A  &kp S  &kp D            &kp F     &kp G        &none  &none  &kp H        &kp J         &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT      &kp Z  &kp X  &kp C            &kp V     &kp B                      &kp N        &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                             &lt 1 BACKSPACE  &kp LGUI  &lt 3 SPACE                &lt 4 ENTER  &kp LEFT_ALT  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
