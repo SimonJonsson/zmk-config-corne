@@ -254,12 +254,12 @@
         };
 
         NUMBERS {
-            display-name = "EXTRA 2";
+            display-name = "numbers";
             bindings = <
 &none  &none  &none  &none  &none  &none  &none  &none  &kp MINUS  &kp N7  &kp N8  &kp N9  &kp EQUAL     &none
 &none  &none  &none  &none  &none  &none  &none  &none  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK  &none
 &none  &none  &none  &none  &none  &none                &kp N0     &kp N1  &kp N2  &kp N3  &trans        &none
-                     &none  &none  &none                &none      &none   &none
+                     &none  &none  &none                &trans     &trans  &trans
             >;
         };
 
@@ -300,7 +300,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "special";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -321,7 +321,7 @@
         compatible = "zmk,conditional-layers";
 
         func_layer {
-            if-layers = <3 4>;
+            if-layers = <4 1>;
             then-layer = <5>;
         };
     };
